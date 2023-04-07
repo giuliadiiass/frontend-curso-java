@@ -1,6 +1,6 @@
 /*
  * Folhas de estilo do template do site.
- * By Luferat
+ * By giulia
  */
 
 /* Importa algumas bibliotecas externas. */
@@ -48,7 +48,7 @@ body {
     /* Fundo */
     background-attachment: fixed;
     background-color: rgb(231, 178, 164);
-    background-image: url('img/pinkbackgrund.jpg');
+    background-image: url('img/pinkbackground.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
