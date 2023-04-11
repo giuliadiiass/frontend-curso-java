@@ -72,15 +72,15 @@ body {
     background-color: rgb(231, 178, 164 0.884);
     margin: 0.5rem;
     border-radius: .35rem;
-    border: 1px dotted rgba(231, 179, 164, 0.13);
+    border: 1px dotted rgb(231, 178, 164);
     display: flex;
     align-items: center;
 }
 
 #wrap>header a {
     font-size: 4rem;
-    color: rgb(231, 178, 164);
-    -webkit-text-stroke: .5px #534545;
+    color:rgb(231, 178, 164);
+    -webkit-text-stroke: .5px rgb(231, 178, 164);
     padding: 0.5rem 1rem 0.5rem 0.5rem;
     text-decoration: none;
 }
@@ -142,7 +142,7 @@ body {
 
 #wrap>nav {
     background-color: #fdd1d1;
-    border: 1px dotted rgb(231, 178, 164);
+    border: 1px dotted#fdd1d1;
     border-radius: .35rem;
     margin: 0 .5rem .5rem .5rem;
     display: flex;
@@ -166,10 +166,9 @@ body {
 }
 
 #wrap>nav a:hover {
-    background-color: rgba(231, 179, 164, 0.555);
-    color: #534545;
+    background-color:  #534545;
+    color: rgb(231, 178, 164);
 }
-
 #wrap>nav a i {
     font-size: 2rem;
     margin-bottom: .4rem;
@@ -180,24 +179,24 @@ body {
 #wrap>main {
     display: flex;
     margin: 0 .5rem;
+    color: #f8c9c9b7;
     flex-grow: 1;
     flex-direction: column;
 }
 
 #wrap>main>article {
-    background-color: #fdd1d188;
+    background-color: #fdd1d1c7;
     border-radius: .35rem;
-    border: 1px dotted #fdd1d196;
-    color: #534545;
+    border: 1px dotted #634f4f;
+    color: #634f4f;
     flex-grow: 1;
 }
 
 #wrap>main>aside {
-    background-color: #fdd1d181;
-    ;
+    background-color: #534545;
     margin-top: .5rem;
     border-radius: .35rem;
-    border: 1px dotted #fdd1d196;
+    border: 1px dotted #534545;
 }
 
 /* Rodapé */
@@ -325,6 +324,6 @@ body {
 
 
 #gadgets a {
-    color: rgb(253, 199, 199);
+    color: rgb(32, 24, 24);
     font-size: 2rem;
 }
