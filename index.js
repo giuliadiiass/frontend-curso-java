@@ -24,9 +24,11 @@
  * Algumas configurações do aplicativo.
  * Dica: você pode acrescentar novas configurações aqui se precisar.
  **/
- var app = {
+var app = {
     siteName: 'Giulia Dias',
-    siteSlogan: 'Moda e beleza.'
+    siteSlogan: 'Moda e beleza.',
+    apiContactsURL: 'http://localhost:3000/contacts',
+    apiArticlesURL: 'http://localhost:3000/articles?_sort=date&_order=desc'
 }
 
 /**
