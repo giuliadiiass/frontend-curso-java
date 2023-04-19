@@ -24,12 +24,15 @@
  * Algumas configurações do aplicativo.
  * Dica: você pode acrescentar novas configurações aqui se precisar.
  **/
-var app = {
-    siteName: 'Giulia Dias',
-    siteSlogan: 'Moda e beleza.',
-    apiContactsURL: 'http://localhost:3000/contacts',
-    apiArticlesURL: 'http://localhost:3000/articles?_sort=date&_order=desc'
-}
+ var apiBaseURL = 'http://localhost:3000/'
+ var app = {
+     siteName: 'FrontEndeiros',
+     siteSlogan: 'Programando para o futuro',
+     apiContactsURL: apiBaseURL + 'contacts',
+     apiArticlesURL: apiBaseURL + 'articles?_sort=date&_order=desc',
+     apiArticleURL: apiBaseURL + 'articles/',
+     apiUserURL: apiBaseURL + 'users/'
+ }
 
 /**
  * jQuery → Quando o documento estiver pronto, executa a função principal,
@@ -59,16 +62,23 @@ function myApp() {
     /**
      * IMPORTANTE!
      * Para que o roteamento funcione corretamente no "live server", é 
-     * necessário que erros 404 abram a página "index.html".
+     * necessário que erros 404 abram a página "404.html".
      **/
 
-    // Extrai a rota da página da URL e armazena em 'path'.
-    var path = window.location.pathname.split('/')[1]
+    // Verifica se o 'localStorage' contém uma rota.
+    if (localStorage.path == undefined) {
 
-    // Se 'path' é vazia, 'path' é a página inicial.
-    if (path == '') path = 'home'
+        // Se não contém, aponta a rota 'home'.
+        localStorage.path = 'home'
+    }
 
-    // Carrega a página solicitada pela rota em 'path'.
+    // Armazena a rota obtida em 'path'.        
+    var path = localStorage.path
+
+    // Apaga o 'localStorage', liberando o recurso.
+    delete localStorage.path
+
+    // Carrega a página solicitada pela rota.
     loadpage(path)
 
     /**
@@ -113,6 +123,8 @@ function routerLink() {
     if (
         href.substring(0, 7) == 'http://' ||
         href.substring(0, 8) == 'https://' ||
+        href.substring(0, 4) == 'tel:' ||
+        href.substring(0, 7) == 'mailto:' ||
         href.substring(0, 1) == '#'
     )
         // Devolve o controle para o HTML.
@@ -274,4 +286,32 @@ function changeTitle(title = '') {
      */
     $('title').html(pageTitle)
 
+}
+
+
+/**
+ * Calcula a idade com base na data (system date).
+ **/
+function getAge(sysDate) {
+    // Obtendo partes da data atual.
+    const today = new Date()
+    const tYear = today.getFullYear()
+    const tMonth = today.getMonth() + 1
+    const tDay = today.getDate()
+
+    // Obtebdo partes da data original.
+    const parts = sysDate.split('-')
+    const pYear = parts[0]
+    const pMonth = parts[1]
+    const pDay = parts[2]
+
+    // Calcula a idade pelo ano.
+    var age = tYear - pYear
+
+    // Verificar o mês e o dia.
+    if (pMonth > tMonth) age--
+    else if (pMonth == tMonth && pDay > tDay) age--
+
+    // Retorna a idade.
+    return age
 }
