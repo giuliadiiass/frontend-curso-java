@@ -1,5 +1,5 @@
 -- ---------------------------------
--- Frontend - Banco de dados
+-- FrontEnd - Banco de dados
 -- By Giulia Dias
 -- MIT License
 -- 
@@ -9,7 +9,7 @@
 -- Apaga o banco de dados caso ele exista.
 -- IMPORTANTE! Só faça isso em momento de desenvolvimento.
 -- Nunca use este código em produção.
-DROP DATABASE IF EXISTS frontendeiros;
+DROP DATABASE IF EXISTS frontend;
 
 -- Cria o banco de dados com caracteres utf8 e buscas case-insensitive.
 CREATE DATABASE frontend CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
@@ -34,6 +34,7 @@ CREATE TABLE users (
     user_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     user_name VARCHAR(255) NOT NULL,
     user_email VARCHAR(255) NOT NULL,
+    user_password VARCHAR(63) NOT NULL,
     user_photo VARCHAR(255) COMMENT 'URL da imagem.',
     user_bio VARCHAR(255),
     user_birth DATE,
@@ -93,51 +94,46 @@ VALUES
 INSERT INTO users (
     user_name,
     user_email,
+    user_password,
     user_photo,
     user_bio,
-    user_birth
-) VALUES(
+    user_birth,
+    user_type
+) VALUES (
     'Giulia Dias',
     'giulia@dias.com',
+    SHA1('Senha_123'),
     'https://randomuser.me/api/portraits/men/33.jpg',
-    'programadora e enroladora',
-    '2004-08-27'
+    'Construtora, programadora e enroladora',
+    '2000-10-28',
+    'author'
 );
 
 -- Insere dados na tabela 'users'.
 -- Somente campos "not null".
 INSERT INTO users (
     user_name,
-    user_email
+    user_email,
+    user_password
 ) VALUES (
     'Setembrino',
-    'set@brino.com.br'
+    'set@brino.com.br',
+    SHA1('Senha_123')
 );
 
 -- Insere dados na tabela 'users'.
 -- Somente o 'name'.
 INSERT INTO users (
-    user_name
+    user_name,
+    user_email,
+    user_password
 ) VALUES (
-    'Hermenilda'
+    'Hermenilda',
+    'herme@nilda.com',
+    SHA1('Senha_123')
 );
 
---- Insere artigos na tabela 'articles'.
-INSERT INTO articles (
-    art_author,
-    art_title,
-    art_thumbnail,
-    art_resume,
-    art_content
-) VALUES (
-    '1',
-    'Primeiro artigo da parada',
-    'https://picsum.photos/200',
-    'Este é o primeiro artigo do nosso blog.',
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ultrices leo. Vivamus in suscipit quam. Sed posuere erat non massa vehicula laoreet.'
-);
-
---- Insere artigos na tabela 'articles'.
+-- Insere artigos na tabela 'articles'.
 INSERT INTO articles (
     art_author,
     art_title,
@@ -169,45 +165,29 @@ INSERT INTO articles (
 
 -- Atividade
 -- 1) Insira pelo menos mais 2 artigos.
+
+INSERT INTO articles (
+    art_author,
+    art_title,
+    art_thumbnail,
+    art_resume,
+    art_content
+) VALUES (
+    '1',
+    'Mais um artigo para o blog',
+    'https://picsum.photos/199',
+    'Resumo do artigo que va aparecer no blog',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ultrices leo. Vivamus in suscipit quam. Sed posuere erat non massa vehicula laoreet.'
+), (
+    '1',
+    'Próximo artigo para do blog',
+    'https://picsum.photos/198',
+    'Esse é só mais um artigo fake',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ultrices leo. Vivamus in suscipit quam. Sed posuere erat non massa vehicula laoreet.'
+);
+
 -- 2) Insira pelo menos 2 comentários de usuários diferentes para um mesmo artigo.
 
--- atividade.
-
-INSERT INTO articles (
-    art_author,
-    art_title,
-    art_thumbnail,
-    art_resume,
-    art_content
-) VALUES (
-    '1',
-    'terceiro artigo',
-    'https://picsum.photos/207',
-    'Este é o terceiro artigo do nosso blog.',
-    'In porta, lacus id consectetur interdum, ipsum nisi maximus tellus, nec tristique lorem libero quis felis. Duis tempus, ligula a venenatis lobortis, enim nibh ultrices enim, ut suscipit enim nulla sed metus. Mauris volutpat euismod neque, et efficitur purus dignissim non. Proin commodo tincidunt dolor sed cursus. Aliquam et eros non dolor viverra pretium. Maecenas id orci ligula. Suspendisse sodales cursus metus, eu hendrerit sapien lobortis a. Pellentesque accumsan ac risus non commodo. Nunc non est gravida, faucibus neque quis, volutpat felis. Cras accumsan dolor eget ex ultricies, pretium tincidunt massa auctor.'
-); 
-
-INSERT INTO articles (
-    art_author,
-    art_title,
-    art_thumbnail,
-    art_resume,
-    art_content
-) VALUES (
-    '1',
-    'quarto artigo',
-    'https://picsum.photos/208',
-    'Este é o terceiro artigo do nosso blog.',
-    'Cras nec ipsum quam. Suspendisse accumsan nunc nec mi porta, quis faucibus arcu sodales. Sed vehicula nisl malesuada lacus pellentesque faucibus. Etiam pretium tempor eros, sit amet ultrices velit porta id. Maecenas vitae neque eget elit fermentum iaculis. Sed at nibh purus. Vestibulum eget malesuada dui.'
-);
--- Cria a tabela de comentários → comments.
-CREATE TABLE comments (
-    cmt_id INT PRIMARY KEY AUTO_INCREMENT,
-    cmt_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    cmt_author INT NOT NULL,
-    cmt_article INT NOT NULL,
-    cmt_comment TEXT NOT NULL,
-    cmt_status ENUM('on', 'off', 'del') DEFAULT 'on',
-    FOREIGN KEY (cmt_author) REFERENCES users (user_id),
-    FOREIGN KEY (cmt_article) REFERENCES articles (art_id)
-);
+INSERT INTO comments ( cmt_author, cmt_article, cmt_comment ) VALUES
+( '2', '2', 'Comentando um comentário comentado.'),
+( '3', '2', 'Comentártio da Hermenilda neste mesmo artigo.');
