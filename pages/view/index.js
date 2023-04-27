@@ -26,6 +26,7 @@ function myView() {
 
             // Exibe na página.
             $('article').html(article)
+            article = ''
 
             // Altera o título da página.
             changeTitle(art.title)
@@ -45,7 +46,7 @@ function myView() {
                 `
 
                     // Obtém todos os artigos deste autor.
-                    $.get(app.apiArticleURL + `?author=${user.id}`)
+                    $.get(app.apiArticleURL + `?author=${user.id}&_limit=5`)
                         .done((uArt) => {
                             authorArts += `<ul>`
                             uArt.forEach((data) => {
@@ -55,6 +56,7 @@ function myView() {
                             });
                             authorArts += `</ul>`
                             $('aside').html(author + authorArts)
+                            authorArts = ''
                         })
                         .fail()
                 })

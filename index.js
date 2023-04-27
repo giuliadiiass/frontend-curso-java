@@ -24,15 +24,15 @@
  * Algumas configurações do aplicativo.
  * Dica: você pode acrescentar novas configurações aqui se precisar.
  **/
- var apiBaseURL = 'http://localhost:3000/'
- var app = {
-     siteName: 'FrontEndeiros',
-     siteSlogan: 'Programando para o futuro',
-     apiContactsURL: apiBaseURL + 'contacts',
-     apiArticlesURL: apiBaseURL + 'articles?_sort=date&_order=desc',
-     apiArticleURL: apiBaseURL + 'articles/',
-     apiUserURL: apiBaseURL + 'users/'
- }
+var apiBaseURL = 'http://localhost:3000/'
+var app = {
+    siteName: 'FrontEndeiros',
+    siteSlogan: 'Programando para o futuro',
+    apiContactsURL: apiBaseURL + 'contacts',
+    apiArticlesURL: apiBaseURL + 'articles?_sort=date&_order=desc',
+    apiArticleURL: apiBaseURL + 'articles/',
+    apiUserURL: apiBaseURL + 'users/'
+}
 
 /**
  * jQuery → Quando o documento estiver pronto, executa a função principal,
@@ -58,6 +58,27 @@ $(document).ready(myApp)
  *  • https://www.w3schools.com/js/js_functions.asp
  **/
 function myApp() {
+
+    // Variável com dados do usuário logado.
+    var user;
+
+    // Se tem usuário logado.
+    if (sessionStorage.userData) {
+
+        // Dados do usuário logado
+        user = JSON.parse(sessionStorage.userData)
+        $('#navUser').html(`
+            <img src="${user.photo}" alt="${user.name}" referrerpolicy="no-referrer">
+            <span>Perfil</span>
+        `)
+        $('#navUser').attr('href', 'profile')
+    } else {
+        $('#navUser').html(`
+            <i class="fa-solid fa-user fa-fw"></i>
+            <span>Login</span>
+        `)
+        $('#navUser').attr('href', 'login')
+    }
 
     /**
      * IMPORTANTE!
@@ -287,7 +308,6 @@ function changeTitle(title = '') {
     $('title').html(pageTitle)
 
 }
-
 
 /**
  * Calcula a idade com base na data (system date).
