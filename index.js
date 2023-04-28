@@ -57,14 +57,16 @@ $(document).ready(myApp)
  * Referências:
  *  • https://www.w3schools.com/js/js_functions.asp
  **/
-function myApp() {
+ function myApp() {
+
+    console.log(sessionStorage.userData)
 
     // Variável com dados do usuário logado.
     var user;
 
     // Se tem usuário logado.
     if (sessionStorage.userData) {
-
+        
         // Dados do usuário logado
         user = JSON.parse(sessionStorage.userData)
         $('#navUser').html(`
