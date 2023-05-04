@@ -1,14 +1,29 @@
-/*
+/**
+ * FrontEndeiros 1.0
+ * MIT License 2023 By Giulia Dias
+ **/
+
+/**
  * Folhas de estilo do template do site.
- * By giulia
+ **/
+
+/******************************************************************/
+/* Importa algumas bibliotecas externas para agilizar o trabalho. */
+/******************************************************************/
+
+/**
+ * Font Awesome → Ícones e Glyphicons. 
+ * Referências: https://fontawesome.com/
  */
-
-/* Importa algumas bibliotecas externas. */
-
-/* Fonte Roboto do "Google Fonts". */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/* Font Awesome → Ícones e Glyphicons. */
+/**
+ * Normalize → CSS que padroniza a view entre diversos navegadores.
+ * Referências: 
+ *  • https://github.com/necolas/normalize.css
+ *  • https://necolas.github.io/normalize.css/
+/
+* Font Awesome → Ícones e Glyphicons. */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 /* Normlize → Padroniza a view do CSS entre navegadores. */
@@ -79,7 +94,7 @@ body {
 
 #wrap>header a {
     font-size: 4rem;
-    color:rgb(231, 178, 164);
+    color: rgb(231, 178, 164);
     -webkit-text-stroke: .5px rgb(231, 178, 164);
     padding: 0.5rem 1rem 0.5rem 0.5rem;
     text-decoration: none;
@@ -129,9 +144,10 @@ body {
 }
 
 #wrap>nav a:hover {
-    background-color:  rgb(231, 178, 164);
+    background-color: rgb(231, 178, 164);
     color: rgb(231, 178, 164);
 }
+
 #wrap>nav a i {
     font-size: 2rem;
     margin-bottom: .4rem;
@@ -263,7 +279,7 @@ body {
         margin-bottom: 0;
         margin-right: .5rem;
     }
-    
+
     #wrap>nav a img {
         width: 1.2rem;
         height: 1.2rem;
