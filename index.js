@@ -26,12 +26,14 @@
  **/
 var apiBaseURL = 'http://localhost:3000/'
 var app = {
-    siteName: 'FrontEndeiros',
-    siteSlogan: 'Programando para o futuro',
+    siteName: 'Blog da Giulia',
+    siteSlogan: 'Moda e beleza',
     apiContactsURL: apiBaseURL + 'contacts',
     apiArticlesURL: apiBaseURL + 'articles?_sort=date&_order=desc',
     apiArticleURL: apiBaseURL + 'articles/',
-    apiUserURL: apiBaseURL + 'users/'
+    apiUserURL: apiBaseURL + 'users/',
+    apiCommentURL: apiBaseURL + 'comments?_sort=date&_order=desc&status=on',
+    apiCommentPostURL: apiBaseURL + 'comments'
 }
 
 
@@ -93,7 +95,7 @@ function myApp() {
     }
 
     // Armazena a rota obtida em 'path'.        
-    var path = sessionStorage.path
+    path = sessionStorage.path
 
     // Apaga o 'localStorage', liberando o recurso.
     delete sessionStorage.path
@@ -102,10 +104,15 @@ function myApp() {
     loadpage(path)
 
     /**
-     * jQuery → Monitora cliques em elementos '<a>' que , se ocorre, chama a função 
+     * jQuery → Monitora cliques em elementos '<a>' que, se ocorre, chama a função 
      * routerLink().
      **/
     $(document).on('click', 'a', routerLink)
+
+    /**
+     * Quando clicar em um artigo.
+     **/
+    $(document).on('click', '.art-item', loadArticle)
 
 }
 
@@ -113,7 +120,9 @@ function myApp() {
 function fbLogin() {
     firebase.auth().signInWithPopup(provider)
         .then(() => {
-            loadpage('home')
+
+            // Recarrega a página atual após o login.
+            loadpage(location.pathname.split('/')[1])
         })
 }
 
@@ -121,6 +130,7 @@ function fbLogin() {
  * Função que processa o clique em um link.
  **/
 function routerLink() {
+
 
     /**
      * Extrai o valor do atributo "href" do elemento clicado e armazena na 
@@ -311,18 +321,18 @@ function changeTitle(title = '') {
     /**
      * Define o título padrão da página.
      */
-    let pageTitle = app.siteName + ' - '
+    let pageTitle = app.siteName + ''
 
     /**
      * Se não foi definido um título para a página, 
      * usa o slogan.
      **/
-    if (title == '') pageTitle += app.siteSlogan
+    if (title == '') pageTitle += ''
 
     /**
      * Se foi definido um título, usa-o.
      */
-    else pageTitle += title
+    else pageTitle += '-' + title
 
     /**
      * Escreve o novo título na tag <title></title>.
@@ -356,4 +366,28 @@ function getAge(sysDate) {
 
     // Retorna a idade.
     return age
+}
+
+/**
+ * Carrega o artigo completo.
+ */
+function loadArticle() {
+
+    // Obtém o id do artigo e armazena na sessão.
+    sessionStorage.article = $(this).attr('data-id')
+
+    // Carrega a página que exibe artigos → view.
+    loadpage('view')
+}
+
+/**
+ * Sanitiza um texto, removendo todas as tags HTML.
+ */
+function stripHtml(html) {
+
+    // Armazena o texto no DOM na forma de string.
+    let doc = new DOMParser().parseFromString(html, 'text/html');
+
+    // Obtém e retorna o conteúdo do DOM como texto puro.
+    return doc.body.textContent || "";
 }

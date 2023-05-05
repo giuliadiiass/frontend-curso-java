@@ -1,5 +1,5 @@
 /**
- * FrontEndeiros 1.0
+ * FrontEnd 1.0
  * MIT License 2023 By Giulia Dias
  **/
 
@@ -53,7 +53,7 @@ a {
 }
 
 a:hover {
-    color: rgb(231, 178, 164);
+    color: rgba(231, 179, 164, 0.849);
     text-decoration: underline;
 }
 
@@ -62,7 +62,7 @@ a:hover {
 body {
     /* Fundo */
     background-attachment: fixed;
-    background-color: rgb(231, 178, 164);
+    background-color: rgb(231, 179, 164);
     background-image: url('img/pinkbackground.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -84,7 +84,7 @@ body {
 /* Renderiza cabeçalho. */
 
 #wrap>header {
-    background-color: rgb(231, 178, 164 0.884);
+    background-color: #fdd1d1;
     margin: 0.5rem;
     border-radius: .35rem;
     border: 1px dotted rgb(231, 178, 164);
@@ -94,7 +94,7 @@ body {
 
 #wrap>header a {
     font-size: 4rem;
-    color: rgb(231, 178, 164);
+    color: #534545;
     -webkit-text-stroke: .5px rgb(231, 178, 164);
     padding: 0.5rem 1rem 0.5rem 0.5rem;
     text-decoration: none;
@@ -145,7 +145,7 @@ body {
 
 #wrap>nav a:hover {
     background-color: rgb(231, 178, 164);
-    color: rgb(231, 178, 164);
+    color: #53454594
 }
 
 #wrap>nav a i {

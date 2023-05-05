@@ -29,7 +29,7 @@
     flex-direction: column;
     margin-bottom: 1rem;
     padding: .25rem .5rem;
-    background-color: rgb(202, 202, 202);
+    background-color: 534545;
     border-radius: .25rem;
 }
 
@@ -52,21 +52,21 @@
     height: 7rem;
     padding: .5rem;
     resize: vertical;
-    border: 1px solid grey;
+    border: 1px solid 534545;
     margin-top: .5rem;
 }
 
 #commentForm button {
     border: none;
-    background-color: steelblue;
-    color: white;
+    background-color: #534545;
+    color: rgb(231, 178, 164);
     padding: .5rem 1rem;
     margin-top: .25rem;
     cursor: pointer;
 }
 
 #commentForm button:hover {
-    background-color: orangered;
+    background-color:rgba(231, 179, 164, 0.377);
 }
 
 #commentList small {
