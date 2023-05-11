@@ -1,6 +1,6 @@
 /**
  * Contacts Control
- * By Giulia Dias
+ * By Luferat
  * MIT License 
  **/
 

@@ -55,7 +55,7 @@ function getAuthorArticles(userData, limit) {
     })
         .done((data) => {
 
-            if (data.length > 0) {
+            if(data.length > 0){
                 var htmlOut = `<h3>Artigos do ${userData.name}</h3><ul class="author-art-list">`
 
                 data.forEach((item) => {
