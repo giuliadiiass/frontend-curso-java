@@ -53,7 +53,7 @@
  }
  
  a:hover {
-     color: rgba(231, 179, 164, 0.685);
+     color:rgb(231, 178, 164);
      text-decoration: underline;
  }
  
@@ -84,10 +84,10 @@
  /* Renderiza cabeçalho. */
  
  #wrap>header {
-     background-color:#ffb6c1;
+     background-color:rgba(231, 179, 164, 0.829);
      margin: 0.5rem;
      border-radius: .35rem;
-     border: 1px dotted #ffb6c1;
+     border: 1px dotted rgba(231, 179, 164, 0.808);
      display: flex;
      align-items: center;
  }
@@ -119,8 +119,8 @@
  }
  
  #wrap>nav {
-     background-color:#ffb6c1;
-     border: 1px dotted #ffb6c1;
+     background-color:rgba(231, 179, 164, 0.836);
+     border: 1px dotted rgba(231, 179, 164, 0.87);
      border-radius: .35rem;
      margin: 0 .5rem .5rem .5rem;
      display: flex;
@@ -144,7 +144,7 @@
  }
  
  #wrap>nav a:hover {
-     background-color:#ffb6c1;
+     background-color:rgba(231, 179, 164, 0.774);
      color: #53454594
  }
  
@@ -172,7 +172,7 @@
  }
  
  #wrap>main>article {
-     background-color: #ffb6c1;
+     background-color: rgba(231, 179, 164, 0.836);
      border-radius: .35rem;
      border: 1px dotted #634f4f;
      color: #634f4f;
@@ -181,10 +181,10 @@
  }
  
  #wrap>main>aside {
-     background-color: #ffb6c1;
+     background-color: rgba(231, 179, 164, 0.836);
      margin-top: .5rem;
      border-radius: .35rem;
-     color: #ffb6c1;
+     color: rgba(231, 179, 164, 0.808);
      border: 1px dotted #534545;
      padding: 0 1rem;
  }
@@ -195,7 +195,7 @@
      background-color: #fdd1d177;
      margin: .5rem;
      border-radius: .35rem;
-     border: 1px dotted #ffb6c1;
+     border: 1px dotted rgba(231, 179, 164, 0.836);
  }
  
  .footer-top {
@@ -242,7 +242,7 @@
  }
  
  .footer-bottom a:hover {
-     color:#ffb6c1;
+     color:rgba(231, 179, 164, 0.808);
      text-decoration: none;
  }
  

@@ -62,7 +62,7 @@ a:hover {
 body {
     /* Fundo */
     background-attachment: fixed;
-    background-color: rgb(231, 179, 164);
+    background-color: rgba(231, 179, 164, 0.849);
     background-image: url('img/pinkbackground.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -84,7 +84,7 @@ body {
 /* Renderiza cabeçalho. */
 
 #wrap>header {
-    background-color: #fdd1d1;
+    background-color: rgb(231, 178, 164);
     margin: 0.5rem;
     border-radius: .35rem;
     border: 1px dotted rgb(231, 178, 164);
@@ -119,8 +119,8 @@ body {
 }
 
 #wrap>nav {
-    background-color: #fdd1d1;
-    border: 1px dotted#fdd1d1;
+    background-color: rgb(231, 178, 164);
+    border: 1px dotted rgb(231, 178, 164);
     border-radius: .35rem;
     margin: 0 .5rem .5rem .5rem;
     display: flex;
