@@ -23,15 +23,15 @@
     {
       "id": 1,
       "date": "2023-04-17 17:45:24",
-      "name": "Joca da Silva",
-      "email": "joca@silva.com",
+      "name": "Giulia Dias",
+      "email": "giulia@dias.com",
       "photo": "https://randomuser.me/api/portraits/men/3.jpg",
-      "bio": "Programador, escultor, pintor, contornador e executor",
-      "birth": "1998-10-04",
+      "bio": "Programadora, escultora, pintora, contornadora e executora",
+      "birth": "2004-08-27",
       "social": {
-        "Facebook": "https://facebook.com/FronsEndeiros/Joca",
-        "Youtube": "https://youtube.com/FronsEndeiros/Joca",
-        "GitHub": "https://github.com/FrontEndeiros/Joca"
+        "Facebook": "https://facebook.com/FronsEnd/GiuliaDias",
+        "Youtube": "https://youtube.com/FronsEnd/GiuliaDias",
+        "GitHub": "https://github.com/FrontEnd/GiuliaDias"
       },
       "type": "author",
       "status": "on"
@@ -129,9 +129,9 @@
   ],
   "comments": [
     {
-      "name": "André Luferat",
+      "name": "Giulia Dias",
       "photo": "https://lh3.googleusercontent.com/a/AGNmyxZH24HtNdsEEpmxHt97Whpea19iB-PcTJLVDzCDCQ=s96-c",
-      "email": "andre@luferat.net",
+      "email": "giulia@dias.com",
       "uid": "xvz40m7oj5YeG7nt0CEmA0ZC5j63",
       "article": "4",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est vero officia ea, ex nisi ab laudantium rerum, consectetur.",
@@ -140,9 +140,9 @@
       "id": 1
     },
     {
-      "name": "André Luferat",
+      "name": "Giulia Dias",
       "photo": "https://lh3.googleusercontent.com/a/AGNmyxZH24HtNdsEEpmxHt97Whpea19iB-PcTJLVDzCDCQ=s96-c",
-      "email": "andre@luferat.net",
+      "email": "giulia@dias.com",
       "uid": "xvz40m7oj5YeG7nt0CEmA0ZC5j63",
       "article": "4",
       "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem dolorem nam cum tenetur doloribus numquam ullam, non ea eius porro molestias, provident consequuntur dolore laudantium similique! Laudantium error quo veniam.",
@@ -151,9 +151,9 @@
       "id": 2
     },
     {
-      "name": "André Luferat",
+      "name": "Giulia Dias",
       "photo": "https://lh3.googleusercontent.com/a/AGNmyxZH24HtNdsEEpmxHt97Whpea19iB-PcTJLVDzCDCQ=s96-c",
-      "email": "andre@luferat.net",
+      "email": "giulia@dias.com",
       "uid": "xvz40m7oj5YeG7nt0CEmA0ZC5j63",
       "article": "5",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quisquam culpa hic nulla in natus possimus nihil, quam assumenda blanditiis eaque non odit atque voluptates quibusdam, dolore esse soluta praesentium!\n\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem dolorem nam cum tenetur doloribus numquam ullam, non ea eius porro molestias, provident consequuntur dolore laudantium similique! Laudantium error quo veniam.\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quisquam culpa hic nulla in natus possimus nihil, quam assumenda blanditiis eaque non odit atque voluptates quibusdam, dolore esse soluta praesentium!\n\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem dolorem nam cum tenetur doloribus numquam ullam, non ea eius porro molestias, provident consequuntur dolore laudantium similique! Laudantium error quo veniam.",
@@ -162,9 +162,9 @@
       "id": 3
     },
     {
-      "name": "André Luferat",
+      "name": "Giulia Dias",
       "photo": "https://lh3.googleusercontent.com/a/AGNmyxZH24HtNdsEEpmxHt97Whpea19iB-PcTJLVDzCDCQ=s96-c",
-      "email": "andre@luferat.net",
+      "email": "giulia@dias.com",
       "uid": "xvz40m7oj5YeG7nt0CEmA0ZC5j63",
       "article": "5",
       "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quisquam culpa hic nulla in natus possimus nihil, quam assumenda blanditiis eaque non odit atque voluptates quibusdam, dolore esse soluta praesentium!\n\nLorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem dolorem nam cum tenetur doloribus numquam ullam, non ea eius porro molestias, provident consequuntur dolore laudantium similique! Laudantium error quo veniam.",
