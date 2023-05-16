@@ -10,7 +10,7 @@
 #cForm input,
 #cForm textarea {
     border: 1px solid red;
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid #534545;
     background-color: rgb(255, 230, 230);
 }
 
@@ -26,7 +26,7 @@
 }
 
 #cForm:invalid button {
-    background-image: linear-gradient(rgb(172, 172, 172), rgb(76, 76, 76));
+    background-image: linear-gradient(rgba(231, 179, 164, 0.836), rgb(76, 76, 76));
     pointer-events: none;
 }
 
@@ -51,7 +51,7 @@ nav.contacts i[class~=fa-square-phone] {
 }
 
 nav.contacts i[class~=fa-square-envelope] {
-    color: orangered;
+    color: #534545;
 }
 
 nav.contacts i[class~=fa-square-facebook] {

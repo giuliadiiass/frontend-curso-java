@@ -1,14 +1,14 @@
 /* Folhas de estilo de home. */
 
 .art-item {
-    background-color: #634f4fd2;
+    background-color: rgb(231, 178, 164);
     border-radius: .5rem;
     margin-bottom: 1rem;
     cursor: pointer;
 }
 
 .art-item:hover {
-    background-color: #634f4fbb;
+    background-color: #53454562;
 }
 
 .art-item img {

@@ -1,6 +1,6 @@
 /**
  * FrontEndeiros 1.0
- * MIT License 2023 By Luferat
+ * MIT License 2023 By Giulia Dias
  **/
 
 /**
@@ -26,10 +26,10 @@
  * Dica: você pode acrescentar novas configurações aqui se precisar.
  **/
 const app = {
-    siteName: 'FrontEndeiros',
-    siteSlogan: 'Programando para o futuro',
-    // apiBaseURL: 'http://localhost:3000/'
-    apiBaseURL: 'https://frontend-cmj1.onrender.com/'
+    siteName: 'Giulia Dias',
+    siteSlogan: 'Moda e beleza',
+    apiBaseURL: 'http://localhost/'
+    //apiBaseURL: 'https://frontend-cmj1.onrender.com/'
 }
 
 /**

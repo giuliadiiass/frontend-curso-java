@@ -179,12 +179,12 @@
      flex-grow: 1;
      padding: 0 1rem;
  }
- 
+  /* troca a cor dos artigos escritos*/
  #wrap>main>aside {
      background-color: rgba(231, 179, 164, 0.836);
      margin-top: .5rem;
      border-radius: .35rem;
-     color: rgba(231, 179, 164, 0.808);
+     color: #534545;
      border: 1px dotted #534545;
      padding: 0 1rem;
  }
@@ -204,12 +204,12 @@ main aside ul li {
 }
 
 main aside ul li.article {
-    color: rgba(231, 179, 164, 0.836);
+    color: #534545;
     cursor: pointer;
 }
 
 main aside ul li.article:hover {
-    color: orangered;
+    color: #534545;
     text-decoration: underline;
 }
  
@@ -290,7 +290,7 @@ main aside ul li.article:hover {
     align-items: center;
     justify-content: center;
     font-size: 4rem;
-    color: grey;
+    color: #534545;
 }
 
 .responsive {
