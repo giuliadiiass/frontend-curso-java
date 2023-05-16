@@ -1,5 +1,5 @@
 /**
- * FrontEndeiros 1.0
+ * FrontEnd 1.0
  * MIT License 2023 By Giulia Dias
  **/
 
@@ -28,8 +28,8 @@
 const app = {
     siteName: 'Giulia Dias',
     siteSlogan: 'Moda e beleza',
-    apiBaseURL: 'http://localhost/'
-    //apiBaseURL: 'https://frontend-cmj1.onrender.com/'
+    //apiBaseURL: 'http://localhost/'
+    apiBaseURL: 'https://frontend-cmj1.onrender.com/'
 }
 
 /**
